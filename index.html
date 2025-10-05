@@ -9,112 +9,245 @@
       padding: 0;
       height: 100%;
       width: 100%;
-      overflow: hidden;
+      overflow-x: hidden; /* Prevent horizontal scroll when two SVGs are present */
       background: #f8f8f8;
       font-family: Arial, sans-serif;
     }
 
     svg {
-      width: 100vw;
-      height: 100vh;
+      /* Use max-width for better display of two side-by-side figures */
+      max-width: 800px;
+      height: auto;
       display: block;
+      margin: 20px auto; /* Center the SVGs and add space */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Simple border/shadow */
+    }
+
+    figure {
+      margin: 20px auto;
+      max-width: 800px;
+    }
+
+    figcaption {
+      text-align: center;
+      font-size: 1.2em;
+      margin-bottom: 10px;
+      font-weight: bold;
+      color: #333;
     }
   </style>
 </head>
 <body>
-  <svg
-    viewBox="0 0 800 500"
-    preserveAspectRatio="xMidYMid slice"
-    aria-labelledby="svgTitle svgDesc"
-    role="img"
-  >
-    <title id="svgTitle">House and Garden Scene</title>
-    <desc id="svgDesc">
-      An SVG illustration of a house and garden, showing sky, grass, sun, cloud, tree, house, roof, chimney, door, windows, fence, a curved path, and a caption.
-    </desc>
+  <figure id="scene-original">
+    <figcaption>Original scene</figcaption>
+    <svg
+      viewBox="0 0 800 500"
+      preserveAspectRatio="xMidYMid slice"
+      aria-labelledby="svgTitle svgDesc"
+      role="img"
+    >
+      <title id="svgTitle">House and Garden Scene</title>
+      <desc id="svgDesc">
+        An SVG illustration of a house and garden, showing sky, grass, sun, cloud, tree, house, roof, chimney, door, windows, fence, a curved path, and a caption.
+      </desc>
 
-    <!-- Sky -->
-    <rect x="0" y="0" width="800" height="300" fill="#aee7ff" />
+      <rect x="0" y="0" width="800" height="300" fill="#aee7ff" />
 
-    <!-- Grass -->
-    <rect x="0" y="300" width="800" height="200" fill="#7ed957" />
+      <rect x="0" y="300" width="800" height="200" fill="#7ed957" />
 
-    <!-- Sun -->
-    <circle cx="700" cy="120" r="40" fill="#ffe066" stroke="#ffd700" stroke-width="4" />
+      <circle cx="700" cy="120" r="40" fill="#ffe066" stroke="#ffd700" stroke-width="4" />
 
-    <!-- Cloud -->
-    <ellipse cx="600" cy="100" rx="40" ry="25" fill="#fff" opacity="0.9" />
-    <circle cx="570" cy="110" r="20" fill="#fff" opacity="0.9" />
-    <circle cx="630" cy="110" r="18" fill="#fff" opacity="0.9" />
+      <ellipse cx="600" cy="100" rx="40" ry="25" fill="#fff" opacity="0.9" />
+      <circle cx="570" cy="110" r="20" fill="#fff" opacity="0.9" />
+      <circle cx="630" cy="110" r="18" fill="#fff" opacity="0.9" />
 
-    <!-- Tree -->
-    <rect x="120" y="270" width="24" height="70" fill="#8d5524" />
-    <circle cx="132" cy="250" r="40" fill="#3cb371" />
+      <rect x="120" y="270" width="24" height="70" fill="#8d5524" />
+      <circle cx="132" cy="250" r="40" fill="#3cb371" />
 
-    <!-- House -->
-    <rect x="320" y="220" width="180" height="120" fill="#ffe5b4" stroke="#c9a06c" stroke-width="3" />
-    <polygon points="310,220 410,150 510,220" fill="#b22222" stroke="#8b1a1a" stroke-width="3" />
-    <rect x="470" y="160" width="22" height="40" fill="#a0522d" stroke="#7b3f00" stroke-width="2" />
+      <rect x="320" y="220" width="180" height="120" fill="#ffe5b4" stroke="#c9a06c" stroke-width="3" />
+      <polygon points="310,220 410,150 510,220" fill="#b22222" stroke="#8b1a1a" stroke-width="3" />
+      <rect x="470" y="160" width="22" height="40" fill="#a0522d" stroke="#7b3f00" stroke-width="2" />
 
-    <!-- Door -->
-    <rect x="390" y="270" width="40" height="70" fill="#deb887" stroke="#8b5c2a" stroke-width="2" />
-    <circle cx="425" cy="305" r="5" fill="#d4af37" />
+      <rect x="390" y="270" width="40" height="70" fill="#deb887" stroke="#8b5c2a" stroke-width="2" />
+      <circle cx="425" cy="305" r="5" fill="#d4af37" />
 
-    <!-- Windows -->
-    <rect x="340" y="240" width="35" height="35" fill="#b3e0ff" stroke="#7ec0ee" stroke-width="2" />
-    <rect x="445" y="240" width="35" height="35" fill="#b3e0ff" stroke="#7ec0ee" stroke-width="2" />
-    <!-- Window panes -->
-    <line x1="357.5" y1="240" x2="357.5" y2="275" stroke="#7ec0ee" stroke-width="2" />
-    <line x1="340" y1="257.5" x2="375" y2="257.5" stroke="#7ec0ee" stroke-width="2" />
-    <line x1="462.5" y1="240" x2="462.5" y2="275" stroke="#7ec0ee" stroke-width="2" />
-    <line x1="445" y1="257.5" x2="480" y2="257.5" stroke="#7ec0ee" stroke-width="2" />
+      <rect x="340" y="240" width="35" height="35" fill="#b3e0ff" stroke="#7ec0ee" stroke-width="2" />
+      <rect x="445" y="240" width="35" height="35" fill="#b3e0ff" stroke="#7ec0ee" stroke-width="2" />
+      <line x1="357.5" y1="240" x2="357.5" y2="275" stroke="#7ec0ee" stroke-width="2" />
+      <line x1="340" y1="257.5" x2="375" y2="257.5" stroke="#7ec0ee" stroke-width="2" />
+      <line x1="462.5" y1="240" x2="462.5" y2="275" stroke="#7ec0ee" stroke-width="2" />
+      <line x1="445" y1="257.5" x2="480" y2="257.5" stroke="#7ec0ee" stroke-width="2" />
 
 
-    <!-- Fence -->
-    <g id="simple-fence" stroke="#CCCCCC" stroke-width="3" fill="#FFFFFF">
-      <line x1="200" y1="310" x2="380" y2="310" stroke-width="4" />
-      <line x1="200" y1="330" x2="380" y2="330" stroke-width="4" />
-      <line x1="440" y1="310" x2="620" y2="310" stroke-width="4" />
-      <line x1="440" y1="330" x2="620" y2="330" stroke-width="4" />
+      <g id="simple-fence" stroke="#CCCCCC" stroke-width="3" fill="#FFFFFF">
+        <line x1="200" y1="310" x2="380" y2="310" stroke-width="4" />
+        <line x1="200" y1="330" x2="380" y2="330" stroke-width="4" />
+        <line x1="440" y1="310" x2="620" y2="310" stroke-width="4" />
+        <line x1="440" y1="330" x2="620" y2="330" stroke-width="4" />
 
-      <polyline points="200,330 200,300 200,300 200,330" />
-      <polyline points="220,330 220,300 220,300 220,330" />
-      <polyline points="240,330 240,300 240,300 240,330" />
-      <polyline points="260,330 260,300 260,300 260,330" />
-      <polyline points="280,330 280,300 280,300 280,330" />
-      <polyline points="300,330 300,300 300,300 300,330" />
-      <polyline points="320,330 320,300 320,300 320,330" />
-      <polyline points="340,330 340,300 340,300 340,330" />
-      <polyline points="360,330 360,300 360,300 360,330" />
-      <polyline points="380,330 380,300 380,300 380,330" />
+        <polyline points="200,330 200,300 200,300 200,330" />
+        <polyline points="220,330 220,300 220,300 220,330" />
+        <polyline points="240,330 240,300 240,300 240,330" />
+        <polyline points="260,330 260,300 260,300 260,330" />
+        <polyline points="280,330 280,300 280,300 280,330" />
+        <polyline points="300,330 300,300 300,300 300,330" />
+        <polyline points="320,330 320,300 320,300 320,330" />
+        <polyline points="340,330 340,300 340,300 340,330" />
+        <polyline points="360,330 360,300 360,300 360,330" />
+        <polyline points="380,330 380,300 380,300 380,330" />
 
-      <polyline points="440,330 440,300 440,300 440,330" />
-      <polyline points="460,330 460,300 460,300 460,330" />
-      <polyline points="480,330 480,300 480,300 480,330" />
-      <polyline points="500,330 500,300 500,300 500,330" />
-      <polyline points="520,330 520,300 520,300 520,330" />
-      <polyline points="540,330 540,300 540,300 540,330" />
-      <polyline points="560,330 560,300 560,300 560,330" />
-      <polyline points="580,330 580,300 580,300 580,330" />
-      <polyline points="600,330 600,300 600,300 600,330" />
-      <polyline points="620,330 620,300 620,300 620,330" />
-    </g>
+        <polyline points="440,330 440,300 440,300 440,330" />
+        <polyline points="460,330 460,300 460,300 460,330" />
+        <polyline points="480,330 480,300 480,300 480,330" />
+        <polyline points="500,330 500,300 500,300 500,330" />
+        <polyline points="520,330 520,300 520,300 520,330" />
+        <polyline points="540,330 540,300 540,300 540,330" />
+        <polyline points="560,330 560,300 560,300 560,330" />
+        <polyline points="580,330 580,300 580,300 580,330" />
+        <polyline points="600,330 600,300 600,300 600,330" />
+        <polyline points="620,330 620,300 620,300 620,330" />
+      </g>
 
-    <!-- Path -->
-    <path
-      d="M410,340 
-        C410,380 410,420 380,460 
-        C350,490 500,500 450,500"
-      fill="#e0cda9"
-      stroke="#bfa76f"
-      stroke-width="4"
-      opacity="0.85"
-    />
+      <path
+        d="M410,340 
+          C410,380 410,420 380,460 
+          C350,490 500,500 450,500"
+        fill="#e0cda9"
+        stroke="#bfa76f"
+        stroke-width="4"
+        opacity="0.85"
+      />
 
-    <!-- Caption -->
-    <text x="400" y="430" text-anchor="middle" font-size="28" fill="#333" font-family="Arial, sans-serif">
-      Welcome to the House & Garden!
-    </text>
-  </svg>
+      <text x="400" y="460" text-anchor="middle" font-size="28" fill="#333" font-family="Arial, sans-serif">
+        Welcome to the House & Garden!
+      </text>
+    </svg>
+  </figure>
+
+  <figure id="scene-annotated-figure">
+    <figcaption>Annotated scene (Step 2)</figcaption>
+    <style scoped>
+      #scene-annotated #annotations {
+        font-size: 12px;
+        fill: #333; 
+        stroke: #999;
+        stroke-width: 1;
+        pointer-events: none; /* Allows interaction with elements underneath */
+      }
+      #scene-annotated #annotations text {
+        font-weight: bold;
+        text-shadow: 0 0 2px rgba(255,255,255,0.7); /* White shadow for contrast */
+      }
+    </style>
+    <svg
+      id="scene-annotated"
+      viewBox="0 0 800 500"
+      preserveAspectRatio="xMidYMid slice"
+      aria-labelledby="svgTitle svgDesc"
+      role="img"
+    >
+      <title id="svgTitle">House and Garden Scene</title>
+      <desc id="svgDesc">
+        An SVG illustration of a house and garden, showing sky, grass, sun, cloud, tree, house, roof, chimney, door, windows, fence, a curved path, and a caption.
+      </desc>
+
+      <rect x="0" y="0" width="800" height="300" fill="#aee7ff" />
+
+      <rect x="0" y="300" width="800" height="200" fill="#7ed957" />
+
+      <circle cx="700" cy="120" r="40" fill="#ffe066" stroke="#ffd700" stroke-width="4" />
+
+      <ellipse cx="600" cy="100" rx="40" ry="25" fill="#fff" opacity="0.9" />
+      <circle cx="570" cy="110" r="20" fill="#fff" opacity="0.9" />
+      <circle cx="630" cy="110" r="18" fill="#fff" opacity="0.9" />
+
+      <rect x="120" y="270" width="24" height="70" fill="#8d5524" />
+      <circle cx="132" cy="250" r="40" fill="#3cb371" />
+
+      <rect x="320" y="220" width="180" height="120" fill="#ffe5b4" stroke="#c9a06c" stroke-width="3" />
+      <polygon points="310,220 410,150 510,220" fill="#b22222" stroke="#8b1a1a" stroke-width="3" />
+      <rect x="470" y="160" width="22" height="40" fill="#a0522d" stroke="#7b3f00" stroke-width="2" />
+
+      <rect x="390" y="270" width="40" height="70" fill="#deb887" stroke="#8b5c2a" stroke-width="2" />
+      <circle cx="425" cy="305" r="5" fill="#d4af37" />
+
+      <rect x="340" y="240" width="35" height="35" fill="#b3e0ff" stroke="#7ec0ee" stroke-width="2" />
+      <rect x="445" y="240" width="35" height="35" fill="#b3e0ff" stroke="#7ec0ee" stroke-width="2" />
+      <line x1="357.5" y1="240" x2="357.5" y2="275" stroke="#7ec0ee" stroke-width="2" />
+      <line x1="340" y1="257.5" x2="375" y2="257.5" stroke="#7ec0ee" stroke-width="2" />
+      <line x1="462.5" y1="240" x2="462.5" y2="275" stroke="#7ec0ee" stroke-width="2" />
+      <line x1="445" y1="257.5" x2="480" y2="257.5" stroke="#7ec0ee" stroke-width="2" />
+
+
+      <g id="simple-fence" stroke="#CCCCCC" stroke-width="3" fill="#FFFFFF">
+        <line x1="200" y1="310" x2="380" y2="310" stroke-width="4" />
+        <line x1="200" y1="330" x2="380" y2="330" stroke-width="4" />
+        <line x1="440" y1="310" x2="620" y2="310" stroke-width="4" />
+        <line x1="440" y1="330" x2="620" y2="330" stroke-width="4" />
+
+        <polyline points="200,330 200,300 200,300 200,330" />
+        <polyline points="220,330 220,300 220,300 220,330" />
+        <polyline points="240,330 240,300 240,300 240,330" />
+        <polyline points="260,330 260,300 260,300 260,330" />
+        <polyline points="280,330 280,300 280,300 280,330" />
+        <polyline points="300,330 300,300 300,300 300,330" />
+        <polyline points="320,330 320,300 320,300 320,330" />
+        <polyline points="340,330 340,300 340,300 340,330" />
+        <polyline points="360,330 360,300 360,300 360,330" />
+        <polyline points="380,330 380,300 380,300 380,330" />
+
+        <polyline points="440,330 440,300 440,300 440,330" />
+        <polyline points="460,330 460,300 460,300 460,330" />
+        <polyline points="480,330 480,300 480,300 480,330" />
+        <polyline points="500,330 500,300 500,300 500,330" />
+        <polyline points="520,330 520,300 520,300 520,330" />
+        <polyline points="540,330 540,300 540,300 540,330" />
+        <polyline points="560,330 560,300 560,300 560,330" />
+        <polyline points="580,330 580,300 580,300 580,330" />
+        <polyline points="600,330 600,300 600,300 600,330" />
+        <polyline points="620,330 620,300 620,300 620,330" />
+      </g>
+
+      <path
+        d="M410,340 
+          C410,380 410,420 380,460 
+          C350,490 500,500 450,500"
+        fill="#e0cda9"
+        stroke="#bfa76f"
+        stroke-width="4"
+        opacity="0.85"
+      />
+
+      <text x="400" y="460" text-anchor="middle" font-size="28" fill="#333" font-family="Arial, sans-serif">
+        Welcome to the House & Garden!
+      </text>
+
+      <g id="annotations">
+        <line x1="320" y1="220" x2="280" y2="200" />
+        <text x="275" y="195" text-anchor="end">rect (x=320, y=220, w=180, h=120)</text>
+
+        <line x1="700" y1="120" x2="650" y2="40" />
+        <text x="645" y="35" text-anchor="end">circle (cx=700, cy=120, r=40)</text>
+
+        <line x1="600" y1="100" x2="500" y2="70" />
+        <text x="495" y="65" text-anchor="end">ellipse (cx=600, cy=100, rx=40, ry=25)</text>
+
+        <line x1="357.5" y1="240" x2="300" y2="250" />
+        <text x="295" y="245" text-anchor="end">line (x1=357.5, y1=240, x2=357.5, y2=275)</text>
+
+        <line x1="260" y1="300" x2="220" y2="280" />
+        <text x="215" y="275" text-anchor="end">polyline points="260,330 260,300 ..."</text>
+
+        <line x1="410" y1="150" x2="550" y2="180" />
+        <text x="555" y="185">polygon points="310,220 410,150 510,220"</text>
+
+        <line x1="410" y1="340" x2="500" y2="360" />
+        <text x="505" y="355">path (d="M410,340 C...")</text>
+
+        <line x1="400" y1="460" x2="300" y2="440" />
+        <text x="295" y="435" text-anchor="end">text (x=400, y=460)</text>
+        </g>
+    </svg>
+  </figure>
 </body>
 </html>
