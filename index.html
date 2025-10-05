@@ -249,5 +249,187 @@
         </g>
     </svg>
   </figure>
+
+  <!-- Step 3: Adjusted scene -->
+  <figure id="scene-adjusted-figure">
+    <figcaption>Adjusted scene (Step 3)</figcaption>
+    <style scoped>
+      /* Scope all adjustments to #scene-adjusted */
+      #scene-adjusted .house-group rect,
+      #scene-adjusted .house-group polygon,
+      #scene-adjusted .house-group path {
+        stroke: #222;
+        stroke-width: 4;
+      }
+      #scene-adjusted .tree-group rect {
+        stroke: #5a3a1b;
+        stroke-width: 3;
+      }
+      #scene-adjusted .tree-group circle {
+        stroke: #226622;
+        stroke-width: 3;
+      }
+      #scene-adjusted .fence-group line,
+      #scene-adjusted .fence-group polyline {
+        stroke: #888;
+        stroke-width: 4;
+        stroke-dasharray: 10,6;
+      }
+      #scene-adjusted .window {
+        stroke: #005fa3;
+        stroke-width: 3;
+      }
+      #scene-adjusted .door {
+        stroke: #7b4a1a;
+        stroke-width: 4;
+      }
+      #scene-adjusted .mailbox {
+        stroke: #333;
+        stroke-width: 2;
+      }
+      #scene-adjusted .smoke {
+        fill: #eee;
+        opacity: 0.7;
+        stroke: none;
+      }
+      /* Stones on footpath */
+      #scene-adjusted .stone {
+        fill: #bbb;
+        stroke: #888;
+        stroke-width: 2;
+        opacity: 0.95;
+      }
+      #scene-adjusted .footpath {
+        fill: none;
+        stroke: none;
+      }
+      #scene-adjusted .caption {
+        font-size: 28px;
+        fill: #222;
+        font-family: Arial, sans-serif;
+        font-weight: bold;
+        text-shadow: 0 0 4px #fff;
+      }
+    </style>
+    <svg
+      id="scene-adjusted"
+      viewBox="0 0 800 500"
+      preserveAspectRatio="xMidYMid slice"
+      aria-labelledby="svgTitle3 svgDesc3"
+      role="img"
+    >
+      <title id="svgTitle3">House and Garden Scene (Adjusted)</title>
+      <desc id="svgDesc3">
+        An SVG illustration of a house and garden, with improved color contrast, repositioned house and tree, dashed fence, a curved stone footpath, mailbox, and chimney smoke.
+      </desc>
+      <!-- Sky and grass -->
+      <rect x="0" y="0" width="800" height="300" fill="#aee7ff" />
+      <rect x="0" y="300" width="800" height="200" fill="#7ed957" />
+
+      <!-- Sun and clouds -->
+      <circle cx="700" cy="120" r="40" fill="#ffe066" stroke="#ffd700" stroke-width="4" />
+      <ellipse cx="600" cy="100" rx="40" ry="25" fill="#fff" opacity="0.9" />
+      <circle cx="570" cy="110" r="20" fill="#fff" opacity="0.9" />
+      <circle cx="630" cy="110" r="18" fill="#fff" opacity="0.9" />
+
+      <!-- Tree, slightly moved right -->
+      <g class="tree-group" transform="translate(30,0)">
+        <rect x="120" y="270" width="24" height="70" fill="#8d5524" />
+        <circle cx="132" cy="250" r="40" fill="#3cb371" />
+      </g>
+
+      <!-- House, slightly moved left -->
+      <g class="house-group" transform="translate(-20,0)">
+        <rect x="320" y="220" width="180" height="120" fill="#ffe5b4" />
+        <polygon points="310,220 410,150 510,220" fill="#b22222" />
+        <rect x="470" y="160" width="22" height="40" fill="#a0522d" />
+        <!-- Door -->
+        <rect x="390" y="270" width="40" height="70" fill="#deb887" class="door" />
+        <circle cx="425" cy="305" r="5" fill="#d4af37" />
+        <!-- Windows -->
+        <rect x="340" y="240" width="35" height="35" fill="#b3e0ff" class="window" />
+        <rect x="445" y="240" width="35" height="35" fill="#b3e0ff" class="window" />
+        <line x1="357.5" y1="240" x2="357.5" y2="275" stroke="#005fa3" stroke-width="2" />
+        <line x1="340" y1="257.5" x2="375" y2="257.5" stroke="#005fa3" stroke-width="2" />
+        <line x1="462.5" y1="240" x2="462.5" y2="275" stroke="#005fa3" stroke-width="2" />
+        <line x1="445" y1="257.5" x2="480" y2="257.5" stroke="#005fa3" stroke-width="2" />
+      </g>
+
+      <!-- Fence, dashed stroke -->
+      <g class="fence-group">
+        <line x1="200" y1="310" x2="380" y2="310" />
+        <line x1="200" y1="330" x2="380" y2="330" />
+        <line x1="440" y1="310" x2="620" y2="310" />
+        <line x1="440" y1="330" x2="620" y2="330" />
+        <polyline points="200,330 200,300 200,300 200,330" />
+        <polyline points="220,330 220,300 220,300 220,330" />
+        <polyline points="240,330 240,300 240,300 240,330" />
+        <polyline points="260,330 260,300 260,300 260,330" />
+        <polyline points="280,330 280,300 280,300 280,330" />
+        <polyline points="300,330 300,300 300,300 300,330" />
+        <polyline points="320,330 320,300 320,300 320,330" />
+        <polyline points="340,330 340,300 340,300 340,330" />
+        <polyline points="360,330 360,300 360,300 360,330" />
+        <polyline points="380,330 380,300 380,300 380,330" />
+        <polyline points="440,330 440,300 440,300 440,330" />
+        <polyline points="460,330 460,300 460,300 460,330" />
+        <polyline points="480,330 480,300 480,300 480,330" />
+        <polyline points="500,330 500,300 500,300 500,330" />
+        <polyline points="520,330 520,300 520,300 520,330" />
+        <polyline points="540,330 540,300 540,300 540,330" />
+        <polyline points="560,330 560,300 560,300 560,330" />
+        <polyline points="580,330 580,300 580,300 580,330" />
+        <polyline points="600,330 600,300 600,300 600,330" />
+        <polyline points="620,330 620,300 620,300 620,330" />
+      </g>
+
+      <!-- Chimney smoke (subtle puff) -->
+      <g class="smoke">
+        <ellipse cx="480" cy="150" rx="10" ry="6" />
+        <ellipse cx="490" cy="140" rx="8" ry="5" />
+        <ellipse cx="500" cy="130" rx="6" ry="3" />
+      </g>
+
+      <!-- Garden path -->
+      <path
+        d="M410,340 
+          C410,380 410,420 380,460 
+          C350,490 500,500 450,500"
+        fill="#e0cda9"
+        stroke="#bfa76f"
+        stroke-width="4"
+        opacity="0.85"
+      />
+
+      <ellipse class="stone" cx="400" cy="460" rx="24" ry="16" /> 
+      <ellipse class="stone" cx="410" cy="430" rx="20" ry="13" />
+      <ellipse class="stone" cx="395" cy="400" rx="18" ry="12" />
+      <ellipse class="stone" cx="410" cy="370" rx="16" ry="11" />
+      <ellipse class="stone" cx="398" cy="345" rx="14" ry="10" /> 
+      <ellipse class="stone" cx="410" cy="328" rx="12" ry="8" />
+
+      <!-- Mailbox near footpath -->
+      <g class="mailbox">
+        <!-- Post -->
+        <rect x="370" y="390" width="8" height="30" fill="#8d5524" />
+        <!-- Box -->
+        <rect x="362" y="375" width="24" height="18" rx="4" fill="#e0e0e0" />
+        <!-- Flag -->
+        <polygon points="384,380 392,380 388,370" fill="#d32f2f" />
+        <!-- Curved lid -->
+        <path d="M362,375 Q374,365 386,375" fill="none" stroke="#888" stroke-width="2" />
+      </g>
+
+      <!-- Curved stone footpath to door -->
+      <path
+        class="footpath"
+        d="M410,410 Q400,380 410,340 Q415,320 390,320"
+      />
+
+      <text x="400" y="460" text-anchor="middle" class="caption">
+        Welcome to the House & Garden!
+      </text>
+    </svg>
+  </figure>
 </body>
 </html>
